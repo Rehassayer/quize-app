@@ -1,6 +1,7 @@
 import React, { use, useState, useRef } from 'react'
 import './Quize.css'
 import {data} from '../../assets/data.js'
+import {useAuth} from "../../Auth/AuthContext"
 
 const Quize = () => {
     let [index, setIndex] = useState(0);
@@ -60,6 +61,7 @@ const Quize = () => {
         setResult(false);
     }
 
+    const {user} = useAuth();
   return (
     <div className='container'>
         <h1>Quize App</h1>
@@ -78,7 +80,7 @@ const Quize = () => {
 
         </>}
         {result?<>
-        
+        <h2>Hello, {user?.username}</h2>
         <h2>You Scored {score} out of {data.length}</h2>
        <button onClick={reset}>Reset</button>
 

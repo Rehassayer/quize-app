@@ -1,0 +1,30 @@
+.navbar {
+  background: #553f9a;
+  padding: 10px 20px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.navbar li {
+  color: white;
+  font-weight: 500;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+.logout-btn {
+  background: #ff4a4a;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}

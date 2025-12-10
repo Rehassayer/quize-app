@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'poppins';
 }
 body{
   min-height: 100vh;
@@ -9,5 +10,5 @@ body{
   justify-content: center;
   align-items: center;
   background-image: linear-gradient(#D8C7FF, #19006C);
-  font-family: 'poppins';
+  padding: 20px;
 }

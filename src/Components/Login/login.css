@@ -1,0 +1,118 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Full background */
+body {
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(#D8C7FF, #19006C);
+}
+
+/* Center wrapper */
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* White card box */
+.form-container {
+  background: white;
+  width: 360px;
+  padding: 35px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  color: #262626;
+}
+
+/* Toggle buttons */
+.form-toggle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.form-toggle button {
+  width: 50%;
+  padding: 12px;
+  background: #f3f3f3;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 10px 10px 0 0;
+  transition: 0.3s ease;
+}
+
+.form-toggle .active {
+  background: #553f9a;
+  color: white;
+}
+
+/* Form layout */
+.form,
+.signup-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form h2,
+.signup-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form input,
+.signup-form input {
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  width: 100%;
+}
+
+.form a {
+  text-align: right;
+  color: #553f9a;
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* Buttons */
+.form button,
+.signup-form button {
+  padding: 12px;
+  background: #553f9a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: 0.3s ease;
+}
+
+.form button:hover,
+.signup-form button:hover {
+  opacity: 0.9;
+}
+
+.form p {
+  text-align: center;
+  font-size: 14px;
+}
+
+.form p a {
+  color: #553f9a;
+  text-decoration: none;
+  font-weight: 500;
+}
