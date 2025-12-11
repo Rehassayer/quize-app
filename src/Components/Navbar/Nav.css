@@ -1,18 +1,25 @@
 .navbar {
   background: #553f9a;
-  padding: 10px 20px;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: center;   
+  align-items: center;
+  border-radius: 10px;
+
 }
 
 .navbar ul {
   list-style: none;
   display: flex;
-  gap: 20px;
-  align-items: center;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar li {
   color: white;
   font-weight: 500;
+  cursor: pointer;
 }
 
 .navbar a {
@@ -24,7 +31,7 @@
   background: #ff4a4a;
   border: none;
   color: white;
-  padding: 5px 10px;
-  border-radius: 5px;
+  padding: 6px 12px;
+  border-radius: 6px;
   cursor: pointer;
 }

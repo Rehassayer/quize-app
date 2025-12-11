@@ -2,6 +2,7 @@ import React, { use, useState, useRef } from 'react'
 import './Quize.css'
 import {data} from '../../assets/data.js'
 import {useAuth} from "../../Auth/AuthContext"
+import Navbar from '../Navbar/Navbar.jsx'
 
 const Quize = () => {
     let [index, setIndex] = useState(0);
@@ -63,6 +64,8 @@ const Quize = () => {
 
     const {user} = useAuth();
   return (
+    <>
+    <Navbar/>
     <div className='container'>
         <h1>Quize App</h1>
         <hr/>
@@ -87,6 +90,7 @@ const Quize = () => {
         </>: <></>}
        
     </div>
+    </>
   )
 }
 

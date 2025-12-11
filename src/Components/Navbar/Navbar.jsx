@@ -22,9 +22,8 @@ const Navbar = () => {
         )}
         {user && (
           <>
-            <li><Link to="/home">Home</Link></li>
-            <li><button onClick={handleLogout} className="logout-btn">Logout</button></li>
             <li>Hello, {user.username}</li>
+            <li><button onClick={handleLogout} className="logout-btn">Logout</button></li>
           </>
 
           )

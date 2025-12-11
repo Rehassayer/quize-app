@@ -1,53 +1,51 @@
-/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Full background */
 body {
-  font-family: 'Poppins', sans-serif;
-  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #d8c7ff, #19006c);
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(#D8C7FF, #19006C);
 }
 
-/* Center wrapper */
 .container {
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
-/* White card box */
 .form-container {
+  width: 380px;
   background: white;
-  width: 360px;
   padding: 35px 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  color: #262626;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
 }
 
-/* Toggle buttons */
 .form-toggle {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
+  justify-content: center;
+  background: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 25px;
+  width: 100%;
 }
 
 .form-toggle button {
-  width: 50%;
-  padding: 12px;
-  background: #f3f3f3;
+  flex: 1;
+  padding: 12px 0;
   border: none;
+  background: transparent;
   cursor: pointer;
   font-size: 16px;
-  border-radius: 10px 10px 0 0;
+  font-weight: 500;
   transition: 0.3s ease;
 }
 
@@ -56,63 +54,60 @@ body {
   color: white;
 }
 
-/* Form layout */
-.form,
-.signup-form {
-  display: flex;
-  flex-direction: column;
-}
-
-.form h2,
-.signup-form h2 {
+.form h2 {
   text-align: center;
   margin-bottom: 20px;
+  font-size: 22px;
 }
 
-.form input,
-.signup-form input {
-  padding: 12px;
-  margin-bottom: 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 15px;
+.form input {
   width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
 }
 
 .form a {
+  display: block;
   text-align: right;
+  margin-bottom: 15px;
   color: #553f9a;
-  text-decoration: none;
   font-size: 14px;
-  margin-bottom: 10px;
+  text-decoration: none;
 }
 
-/* Buttons */
-.form button,
-.signup-form button {
+.form button {
+  display: block;
+  width: 100%;
   padding: 12px;
   background: #553f9a;
   color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
   font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  margin: 0 auto;
   margin-top: 10px;
-  transition: 0.3s ease;
 }
 
-.form button:hover,
-.signup-form button:hover {
-  opacity: 0.9;
+.form button:hover {
+  background: #452f83;
 }
 
 .form p {
   text-align: center;
   font-size: 14px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
 }
 
 .form p a {
   color: #553f9a;
+  font-weight: 600;
   text-decoration: none;
-  font-weight: 500;
 }
