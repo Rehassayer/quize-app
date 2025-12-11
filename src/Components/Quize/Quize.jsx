@@ -10,6 +10,7 @@ const Quize = () => {
     let [lock, setLock] = useState(false);
     let [score, setScore] = useState(0);   
     let [result, setResult] = useState(false); 
+    let [answers, setAnswers] = useState([]);
 
     let Option1 = useRef(null);
     let Option2 = useRef(null);
@@ -19,9 +20,21 @@ const Quize = () => {
     let option_array = [Option1, Option2, Option3, Option4];
 
     const checkAns = (e, ans) => {
-        if(lock === false){
-
+        if(!lock){
             
+                    const selectedOption = question["option" + ans]; 
+                            const correctOption = question[question.answer];      // actual correct answer text
+
+
+            setAnswers(prev => [
+                ...prev,{
+                    question: question.question,
+                    selected: selectedOption,
+
+                    correct:correctOption
+                }
+            ])
+
                     if(question.answer === "option"+ans){
                         e.target.classList.add("correct");
                         setLock(true);
@@ -43,8 +56,9 @@ const Quize = () => {
                 return 0;
 
             }
-            setIndex(++index);
-            setQuestion(data[index]);
+            const newIndex = index + 1;
+            setIndex(newIndex);
+            setQuestion(data[newIndex]);
             setLock(false);
             option_array.map((option) => {
                 option.current.classList.remove("wrong");
@@ -60,6 +74,7 @@ const Quize = () => {
         setScore(0);
         setLock(false);
         setResult(false);
+        setAnswers([])
     }
 
     const {user} = useAuth();
@@ -82,12 +97,29 @@ const Quize = () => {
         <div className="index">{index+1} of {data.length} question</div>
 
         </>}
-        {result?<>
+        {result && (
+            <>
         <h2>Hello, {user?.username}</h2>
         <h2>You Scored {score} out of {data.length}</h2>
+        <h3>Your Answer: </h3>
+        <ul className='review-list'>{
+            answers.map((item, i) => (
+                <li key={i}>
+                    <p className='question'>{item.question}</p>
+                    <div className='answers'> 
+
+                    <span className='selected'>Your Answer: {item.selected}</span>
+                    <span className='correct'>Correct Answer: {item.correct}</span>
+                    </div>
+                    <hr/>
+                </li>
+            ))
+            }
+
+        </ul>
        <button onClick={reset}>Reset</button>
 
-        </>: <></>}
+        </>)}
        
     </div>
     </>
